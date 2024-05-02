@@ -11,3 +11,18 @@ vms\scripts\activate`
 
 Project name is given as backend
 
+
+simple jwt setup
+
+installation
+adjusting requirements in settings.py 
+adding /api/token url 
+adding refresh and access token expiration time in settings.py
+
+setting up endpoints
+1. /api/vendor - create a vendor
+
+   only want name, contact details , address atribute
+   vendor code,and others are generated automaticaaly and initially others are 0 values , since there is no previos purchase trach records
+
+   
