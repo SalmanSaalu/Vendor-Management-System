@@ -18,7 +18,8 @@ vms is the env name used <br/><br/>
 ### 5. Apply migrations and Run the development Server
 `python manage.py makemigrations`<br/>
 `python manage.py migrate` <br/>
-`python manage.py runserver`
+`python manage.py runserver` <br/>
+Run `http://localhost:8000/api/` in Web Browser to check setup is successful
 
 ## Configuration
 ### 1. Create a superuser
@@ -26,6 +27,11 @@ vms is the env name used <br/><br/>
 ### 2. Create a token for superuser / Admin
 `python manage.py drf_create_token <superusername>`
 
+## Overview
+A Vendor Profile Management System containing models such as Vendor,PurchaseOrder and HistoricalPerformance.For API development used django rest framework and Postman for checking API functionality.API endpoints are secured using Token based Authentication where only admin(token) can access.In this system there are <br/>
+   Admin  - manages vendors,purchase orders and historical Performance 
+   Vendor - returns acknowledgement for a purchase order 
+### 1. API ENDPOINTS
 simple jwt setup
 
 installation
