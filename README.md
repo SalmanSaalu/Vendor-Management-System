@@ -19,7 +19,7 @@ vms is the env name used <br/><br/>
 `python manage.py makemigrations`<br/>
 `python manage.py migrate` <br/>
 `python manage.py runserver` <br/>
-Run `http://localhost:8000/api/` in Web Browser to check setup is successful
+Run `http://localhost:8000/api/` or `http://127.0.0.1:8000/api/` in Web Browser to check setup is successful.
 
 ## Configuration
 ### 1. Create a superuser
@@ -37,7 +37,12 @@ Run `http://localhost:8000/api/` in Web Browser to check setup is successful
 
 ## API Endpoints
 ### I. Vendor Profile Management
-**1. GET `/api/vendors/` - Listing all vendors**
+In vendor profile management all the api endpoints are secured using token authentication, where admin with the token can only access the endpoints.
+Postman is used to manage the API functionalities.So in Postman tool,Headers we pass a variable **Authorization** `(eg : Authorization - Token 3fcf22caed8e2863745d9effd957f2c376313da0)`
+to access the functionality.
+
+**1. GET `/api/vendors/` - Listing all vendors**<br/>
+
 simple jwt setup
 
 installation
