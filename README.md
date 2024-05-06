@@ -24,8 +24,13 @@ Run `http://localhost:8000/api/` or `http://127.0.0.1:8000/api/` in Web Browser 
 ## Configuration
 ### 1. Create a superuser
 `python manage.py createsuperuser`
-### 2. Create a token for superuser / Admin
-`python manage.py drf_create_token <superusername>`
+### 2. Create a token for superuser / Admin 
+Using postman pass username and password as POST request to return token of the corresponding user (eg: Login Form) <br/>
+`api/auth/login/` <br/>
+
+note:&nbsp; For every user registered in django user model will return a token when the `api/auth/login/` with the POST request is called.
+But only the token corresponding to the adminUser can access the API endpoints (permissionClass=isAdminUSer).
+
 
 ## Overview
 - A Vendor Profile Management System containing models such as Vendor,PurchaseOrder and HistoricalPerformance.<br/>
