@@ -62,11 +62,11 @@ to access the functionality.
 **2. GET `/api/vendors/` - Listing all vendors**<br/><br/>
 &nbsp; &nbsp; &nbsp; &nbsp;![image](https://github.com/SalmanSaalu/Vendor-Management-System/assets/87108862/4f94400a-c777-42bc-b632-51cd38cd3677)
 
-**3. GET `/api/vendors/{vendor_id}/ - Retrieve details of a specific vendor**<br/><br/>
+**3. GET `/api/vendors/{vendor_id}/` - Retrieve details of a specific vendor**<br/><br/>
 - passing a **id** (vendor_id) of a vendor which is already created<br/><br/>
 &nbsp; &nbsp; &nbsp; &nbsp; ![image](https://github.com/SalmanSaalu/Vendor-Management-System/assets/87108862/840ef218-7a4f-4ae9-a600-3a4d84727cfd)
 
-**4. PUT `/api/vendors/{vendor_id}/ - Updating details of a specific vendor**<br/><br/>
+**4. PUT `/api/vendors/{vendor_id}/` - Updating details of a specific vendor**<br/><br/>
 - passing a **id** of a vendor which is created
 - Adding parameters in the **PUT** request such as **name,contact_details and address**:<br/><br/>
   &nbsp; &nbsp; &nbsp; &nbsp; ![image](https://github.com/SalmanSaalu/Vendor-Management-System/assets/87108862/fe0876a3-f2f3-4446-94ac-ecd3c7244819)
@@ -77,7 +77,7 @@ to access the functionality.
 - eg : After updating the **id=16** <br/><br/>
   &nbsp; &nbsp; &nbsp; &nbsp; ![image](https://github.com/SalmanSaalu/Vendor-Management-System/assets/87108862/57982003-8bab-4c50-9de5-873617ea8746)
 
-**5. DELETE `/api/vendors/{vendor_id}/ - Deleting a specific vendor**<br/><br/>
+**5. DELETE `/api/vendors/{vendor_id}/` - Deleting a specific vendor**<br/><br/>
 - passing **id** of vendor for deletion
 - Returns a response of successful deletion `{"response": "deletion successsful"}`
      
