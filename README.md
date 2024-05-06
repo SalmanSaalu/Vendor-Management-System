@@ -7,7 +7,7 @@ This system will handle vendor profiles, track purchase orders, and calculate ve
 ## Installation
 ### 1. clone repository
 `git clone https://github.com/SalmanSaalu/Vendor-Management-System.git`
-### 2. Navigate project Directory
+### 2. Navigate to project directory
 `cd backend`
 ### 3. Setup a virtual Environment and activate it
 vms is the env name used <br/><br/>
@@ -15,12 +15,16 @@ vms is the env name used <br/><br/>
 `vms\scripts\activate`
 ### 4. Installing dependencies
 `pip install -r requirements.txt`
+### 5. Apply migrations and Run the development Server
+`python manage.py makemigrations`<br/>
+`python manage.py migrate`</br/>
+`python manage.py runserver`
 
-
-## Step 2 : Project Setup
-
-Project name is given as backend
-
+## Configuration
+###1. Create a superuser
+`python manage.py createsuperuser`
+###2. Create a token for superuser / Admin
+`python manage.py drf_create_token <superusername>`
 
 simple jwt setup
 
