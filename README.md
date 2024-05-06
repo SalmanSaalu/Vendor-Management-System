@@ -1,5 +1,4 @@
-![image](https://github.com/SalmanSaalu/Vendor-Management-System/assets/87108862/08394c0d-45ea-451a-94b5-04aedae040a6)# Vendor-Management-System
-
+# Vendor-Management-System
 ## Introduction
 A vendor management system using django and django-rest-framework.
 This system will handle vendor profiles, track purchase orders, and calculate vendor performance metrics.
@@ -48,9 +47,7 @@ to access the functionality.
 
 **1. POST `/api/vendors/` - Posting a vendor**<br/><br/>
 - Passing variables such as **name,contact_details and address**<br/><br/>
-&nbsp; &nbsp; &nbsp; &nbsp; eg: **{ "name":"vivek",
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"contact_details":"9978675645",
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"address":"123 street" }**
+&nbsp; &nbsp; &nbsp; &nbsp; eg: ![image](https://github.com/SalmanSaalu/Vendor-Management-System/assets/87108862/2dfcb53f-a9da-4738-bd0a-5ef0e04ab719)
 
 - The fields such as:<br/><br/>
 &nbsp; &nbsp; &nbsp; &nbsp; **- fulfillment_rate <br/>
