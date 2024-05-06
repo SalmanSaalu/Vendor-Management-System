@@ -48,11 +48,11 @@ to access the functionality.
 
 **1. POST `/api/vendors/` - Posting a vendor**<br/><br/>
 - Passing variables such as **name,contact_details and address**
-- The fields such as <br/>
-      **- fulfillment_rate <br/>
-      - on_time_delivery_rate<br/>
-      - quality_rating_avg<br/>
-      - average_response_time**<br/>
+- The fields such as:<br/><br/>
+&nbsp; &nbsp; &nbsp; &nbsp; **- fulfillment_rate <br/>
+&nbsp; &nbsp; &nbsp; &nbsp; - on_time_delivery_rate<br/>
+&nbsp; &nbsp; &nbsp; &nbsp; - quality_rating_avg<br/>
+&nbsp; &nbsp; &nbsp; &nbsp; - average_response_time**<br/><br/>
       are not passed because these are the fields which has to be filled based on the vendor performance.
 - The **vendor_code** is stored based on a backend login (random number generation)
 
