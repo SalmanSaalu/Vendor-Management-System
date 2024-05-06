@@ -1,6 +1,9 @@
 # Vendor-Management-System
 
-## Step 1 : Environment Setup
+## Intruduction
+A vendor management system using django and django-rest-framework.
+This system will handle vendor profiles, track purchase orders, and calculate vendor performance metrics.
+: Environment Setup
 
 vms is the env name used  
 `python -m venv vms
