@@ -31,10 +31,13 @@ Run `http://localhost:8000/api/` in Web Browser to check setup is successful
 - A Vendor Profile Management System containing models such as Vendor,PurchaseOrder and HistoricalPerformance.<br/>
 - For API development used django rest framework and Postman for checking API functionality.<br/>
 - API endpoints are secured using Token based Authentication where only admin(token) can access.
-- In this system there are <br/>
+- In this system there are :<br/><br/>
 &nbsp; &nbsp; &nbsp; &nbsp; **Admin**  - manages vendors,purchase orders and historical Performance  <br/>
-&nbsp; &nbsp; &nbsp; &nbsp; **Vendor** - returns acknowledgement for a purchase order 
-### 1. API ENDPOINTS
+&nbsp; &nbsp; &nbsp; &nbsp; **Vendor** - returns acknowledgement for a purchase order <br/>
+
+## API Endpoints
+### I. Vendor Profile Management
+**1. GET `/api/vendors/` - Listing all vendors**
 simple jwt setup
 
 installation
