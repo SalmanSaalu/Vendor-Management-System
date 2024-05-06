@@ -1,4 +1,4 @@
-# Vendor-Management-System
+![image](https://github.com/SalmanSaalu/Vendor-Management-System/assets/87108862/ae6cd631-5db4-4156-b36c-8ed7f7a668ec)# Vendor-Management-System
 ## Introduction
 A vendor management system using django and django-rest-framework.
 This system will handle vendor profiles, track purchase orders, and calculate vendor performance metrics.
@@ -62,10 +62,28 @@ to access the functionality.
 **2. GET `/api/vendors/` - Listing all vendors**<br/><br/>
 &nbsp; &nbsp; &nbsp; &nbsp;![image](https://github.com/SalmanSaalu/Vendor-Management-System/assets/87108862/4f94400a-c777-42bc-b632-51cd38cd3677)
 
-setting up endpoints
-1. /api/vendor - create a vendor
+**3. GET `/api/vendors/{vendor_id}/ - Retrieve details of a specific vendor**<br/><br/>
+- passing a **id** (vendor_id) of a vendor which is already created<br/><br/>
+&nbsp; &nbsp; &nbsp; &nbsp; ![image](https://github.com/SalmanSaalu/Vendor-Management-System/assets/87108862/840ef218-7a4f-4ae9-a600-3a4d84727cfd)
 
-   only want name, contact details , address atribute
-   vendor code,and others are generated automaticaaly and initially others are 0 values , since there is no previos purchase trach records
+**4. PUT `/api/vendors/{vendor_id}/ - Updating details of a specific vendor**<br/><br/>
+- passing a **id** of a vendor which is created
+- Adding parameters in the **PUT** request such as **name,contact_details and address**:
+  &nbsp; &nbsp; &nbsp; &nbsp; ![image](https://github.com/SalmanSaalu/Vendor-Management-System/assets/87108862/fe0876a3-f2f3-4446-94ac-ecd3c7244819)
+  <br/>
+- if any of the field is not given ,returns a Response where corresponding field is required.
+- **vendor_code** is not update since each vendor should have a unique code.
+- The model fields for performance metrics analysis in the **Vendor** table is not updated since it is only updated based on the vendor performance.
+- eg : After updating the **id=16** <br/><br/>
+  &nbsp; &nbsp; &nbsp; &nbsp; ![image](https://github.com/SalmanSaalu/Vendor-Management-System/assets/87108862/57982003-8bab-4c50-9de5-873617ea8746)
+
+**5. DELETE `/api/vendors/{vendor_id}/ - Deleting a specific vendor**<br/><br/>
+- passing **id** of vendor for deletion
+- Returns a response of successful deletion `{"response": "deletion successsful"}`
+     
+### II.Purchase Order Tracking
+In Purchase Order Tracking **all the api endpoints are secured using token authentication**, where admin with the token can only access the endpoints.
+
+**1. POST `/api/purchase_orders/` - Posting a vendor**<br/><br/>
 
    
