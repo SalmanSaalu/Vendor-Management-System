@@ -56,7 +56,7 @@ to access the functionality.
 &nbsp; &nbsp; &nbsp; &nbsp; - average_response_time**<br/><br/>
       are not passed because these are the fields which has to be filled based on the vendor performance so all the values is stored as 0.
 - The **vendor_code** is stored based on a backend logic (random number generation)
-- Return a response in JSON format containing
+- Return a response in JSON format containing<br/>
 &nbsp; &nbsp; &nbsp; &nbsp; ![image](https://github.com/SalmanSaalu/Vendor-Management-System/assets/87108862/2d758011-67a8-42b0-b83d-b8cde903eadb)
 
 **2. GET `/api/vendors/` - Listing all vendors**<br/><br/>
