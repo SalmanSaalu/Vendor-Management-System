@@ -1,4 +1,4 @@
-# Vendor-Management-System
+![image](https://github.com/SalmanSaalu/Vendor-Management-System/assets/87108862/08394c0d-45ea-451a-94b5-04aedae040a6)# Vendor-Management-System
 
 ## Introduction
 A vendor management system using django and django-rest-framework.
@@ -47,24 +47,21 @@ Postman is used to manage the API functionalities.So in Postman tool,Headers we 
 to access the functionality.
 
 **1. POST `/api/vendors/` - Posting a vendor**<br/><br/>
-- Passing variables such as **name,contact_details and address**
+- Passing variables such as **name,contact_details and address**<br/><br/>
+&nbsp; &nbsp; &nbsp; &nbsp; eg: **{ "name":"vivek",
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"contact_details":"9978675645",
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"address":"123 street" }**
+
 - The fields such as:<br/><br/>
 &nbsp; &nbsp; &nbsp; &nbsp; **- fulfillment_rate <br/>
 &nbsp; &nbsp; &nbsp; &nbsp; - on_time_delivery_rate<br/>
 &nbsp; &nbsp; &nbsp; &nbsp; - quality_rating_avg<br/>
 &nbsp; &nbsp; &nbsp; &nbsp; - average_response_time**<br/><br/>
       are not passed because these are the fields which has to be filled based on the vendor performance.
-- The **vendor_code** is stored based on a backend login (random number generation)
+- The **vendor_code** is stored based on a backend logic (random number generation)
+- Return a response in JSON format containing 
 
-eg : Giving data in POSTMAN as raw data
 
-
-simple jwt setup
-
-installation
-adjusting requirements in settings.py 
-adding /api/token url 
-adding refresh and access token expiration time in settings.py
 
 setting up endpoints
 1. /api/vendor - create a vendor
