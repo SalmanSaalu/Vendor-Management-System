@@ -47,18 +47,20 @@ to access the functionality.
 
 **1. POST `/api/vendors/` - Posting a vendor**<br/><br/>
 - Passing variables such as **name,contact_details and address**<br/><br/>
-&nbsp; &nbsp; &nbsp; &nbsp; eg: ![image](https://github.com/SalmanSaalu/Vendor-Management-System/assets/87108862/2dfcb53f-a9da-4738-bd0a-5ef0e04ab719)
+&nbsp; &nbsp; &nbsp; &nbsp; ![image](https://github.com/SalmanSaalu/Vendor-Management-System/assets/87108862/2dfcb53f-a9da-4738-bd0a-5ef0e04ab719)
 
 - The fields such as:<br/><br/>
 &nbsp; &nbsp; &nbsp; &nbsp; **- fulfillment_rate <br/>
 &nbsp; &nbsp; &nbsp; &nbsp; - on_time_delivery_rate<br/>
 &nbsp; &nbsp; &nbsp; &nbsp; - quality_rating_avg<br/>
 &nbsp; &nbsp; &nbsp; &nbsp; - average_response_time**<br/><br/>
-      are not passed because these are the fields which has to be filled based on the vendor performance.
+      are not passed because these are the fields which has to be filled based on the vendor performance so all the values is stored as 0.
 - The **vendor_code** is stored based on a backend logic (random number generation)
-- Return a response in JSON format containing 
+- Return a response in JSON format containing
+&nbsp; &nbsp; &nbsp; &nbsp; ![image](https://github.com/SalmanSaalu/Vendor-Management-System/assets/87108862/2d758011-67a8-42b0-b83d-b8cde903eadb)
 
-
+**2. GET `/api/vendors/` - Listing all vendors**<br/><br/>
+&nbsp; &nbsp; &nbsp; &nbsp;![image](https://github.com/SalmanSaalu/Vendor-Management-System/assets/87108862/4f94400a-c777-42bc-b632-51cd38cd3677)
 
 setting up endpoints
 1. /api/vendor - create a vendor
