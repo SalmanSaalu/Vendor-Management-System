@@ -29,7 +29,7 @@ Using postman pass username and password as POST request to return token of the 
 `api/auth/login/` <br/>
 
 note:&nbsp; For every user registered in django user model will return a token when the `api/auth/login/` with the POST request is called.
-But only the token corresponding to the adminUser can access the API endpoints (permissionClass=isAdminUSer).
+But only the token corresponding to the adminUser can access the API endpoints (permissionClass=isAdminUser).
 
 
 ## Overview
@@ -42,11 +42,22 @@ But only the token corresponding to the adminUser can access the API endpoints (
 
 ## API Endpoints
 ### I. Vendor Profile Management
-In vendor profile management all the api endpoints are secured using token authentication, where admin with the token can only access the endpoints.
+In vendor profile management **all the api endpoints are secured using token authentication**, where admin with the token can only access the endpoints.
 Postman is used to manage the API functionalities.So in Postman tool,Headers we pass a variable **Authorization** `(eg : Authorization - Token 3fcf22caed8e2863745d9effd957f2c376313da0)`
 to access the functionality.
 
-**1. GET `/api/vendors/` - Listing all vendors**<br/>
+**1. POST `/api/vendors/` - Posting a vendor**<br/><br/>
+- Passing variables such as **name,contact_details and address**
+- The fields such as <br/>
+      **- fulfillment_rate <br/>
+      - on_time_delivery_rate<br/>
+      - quality_rating_avg<br/>
+      - average_response_time**<br/>
+      are not passed because these are the fields which has to be filled based on the vendor performance.
+- The **vendor_code** is stored based on a backend login (random number generation)
+
+eg : Giving data in POSTMAN as raw data
+
 
 simple jwt setup
 
