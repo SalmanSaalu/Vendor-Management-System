@@ -1,4 +1,4 @@
-![image](https://github.com/SalmanSaalu/Vendor-Management-System/assets/87108862/ae6cd631-5db4-4156-b36c-8ed7f7a668ec)# Vendor-Management-System
+# Vendor-Management-System
 ## Introduction
 A vendor management system using django and django-rest-framework.
 This system will handle vendor profiles, track purchase orders, and calculate vendor performance metrics.
@@ -56,7 +56,7 @@ to access the functionality.
 &nbsp; &nbsp; &nbsp; &nbsp; - average_response_time**<br/><br/>
       are not passed because these are the fields which has to be filled based on the vendor performance so all the values is stored as 0.
 - The **vendor_code** is stored based on a backend logic (random number generation)
-- Return a response in JSON format containing<br/>
+- Return a response in JSON format containing<br/><br/>
 &nbsp; &nbsp; &nbsp; &nbsp; ![image](https://github.com/SalmanSaalu/Vendor-Management-System/assets/87108862/2d758011-67a8-42b0-b83d-b8cde903eadb)
 
 **2. GET `/api/vendors/` - Listing all vendors**<br/><br/>
@@ -68,7 +68,7 @@ to access the functionality.
 
 **4. PUT `/api/vendors/{vendor_id}/ - Updating details of a specific vendor**<br/><br/>
 - passing a **id** of a vendor which is created
-- Adding parameters in the **PUT** request such as **name,contact_details and address**:
+- Adding parameters in the **PUT** request such as **name,contact_details and address**:<br/><br/>
   &nbsp; &nbsp; &nbsp; &nbsp; ![image](https://github.com/SalmanSaalu/Vendor-Management-System/assets/87108862/fe0876a3-f2f3-4446-94ac-ecd3c7244819)
   <br/>
 - if any of the field is not given ,returns a Response where corresponding field is required.
