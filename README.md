@@ -5,13 +5,16 @@ A vendor management system using django and django-rest-framework.
 This system will handle vendor profiles, track purchase orders, and calculate vendor performance metrics.
 
 ## Installation
-### 1.clone repository
+### 1. clone repository
 `git clone https://github.com/SalmanSaalu/Vendor-Management-System.git`
-: Environment Setup
-
-vms is the env name used  
+### 2. Navigate project Directory
+`cd backend`
+### 3. Setup a virtual Environment and activate it
+vms is the env name used 
 `python -m venv vms
 vms\scripts\activate`
+### 4. Installing dependencies
+`pip install -r requirements.txt`
 
 
 ## Step 2 : Project Setup
