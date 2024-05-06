@@ -10,9 +10,9 @@ This system will handle vendor profiles, track purchase orders, and calculate ve
 ### 2. Navigate project Directory
 `cd backend`
 ### 3. Setup a virtual Environment and activate it
-vms is the env name used 
-`python -m venv vms
-vms\scripts\activate`
+vms is the env name used <br/>
+`python -m venv vms`
+`vms\scripts\activate`
 ### 4. Installing dependencies
 `pip install -r requirements.txt`
 
