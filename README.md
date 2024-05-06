@@ -17,13 +17,13 @@ vms is the env name used <br/><br/>
 `pip install -r requirements.txt`
 ### 5. Apply migrations and Run the development Server
 `python manage.py makemigrations`<br/>
-`python manage.py migrate`</br/>
+`python manage.py migrate` <br/>
 `python manage.py runserver`
 
 ## Configuration
-###1. Create a superuser
+### 1. Create a superuser
 `python manage.py createsuperuser`
-###2. Create a token for superuser / Admin
+### 2. Create a token for superuser / Admin
 `python manage.py drf_create_token <superusername>`
 
 simple jwt setup
