@@ -84,6 +84,53 @@ to access the functionality.
 ### II.Purchase Order Tracking
 In Purchase Order Tracking **all the api endpoints are secured using token authentication**, where admin with the token can only access the endpoints.
 
-**1. POST `/api/purchase_orders/` - Posting a vendor**<br/><br/>
+**1. POST `/api/purchase_orders/` - Posting a Purchase_order**<br/><br/>
+- passing variable such as **vendor,items and status**<br/><br/>
+- &nbsp; &nbsp; &nbsp; &nbsp; ![image](https://github.com/SalmanSaalu/Vendor-Management-System/assets/87108862/a438d023-ded0-4579-9617-747f1a1163c4)<br/>
+- **status** field should be given as 'pending' since when placing a purchase order status should be pending.
+- **vendor** field should contain a **id** of the vendor.
+- **items** field should contain data in a json format.Check the format of the data passed on the items variable.
+- Returns a Response such as <br/><br/>
+&nbsp; &nbsp; &nbsp; &nbsp; ![image](https://github.com/SalmanSaalu/Vendor-Management-System/assets/87108862/d041a0fe-3f27-47a6-9f49-ac5842738acb)<br/>
+- Here **po_number** is a unique number automatically generated in backend and stored
+- **order_date** is current date and time of the order placed
+- **quanlity** field stores the number of items in json data.
+- **issue_date** field stores a time after the 1 minute of **order_date** which makes the vendor to access the order.
+- **delivery_date,quality_rating and acknowledgement_date** is given as null initially.
+
+**2. GET `/api/purchase_orders/` - Listing all Purchase_orders by filtering based on vendors**<br/><br/>
+- in the API endpoints add parameter `/api/purchase_orders/?vendor_id=id`
+- **id** is the id of the vendor.
+- Returns response whn passing id=16 as:<br/><br/>
+&nbsp; &nbsp; &nbsp; &nbsp; ![image](https://github.com/SalmanSaalu/Vendor-Management-System/assets/87108862/3eaf9a00-033d-43e8-bd20-136489e2c8da)<br/>
+
+**3. GET `/api/purchase_orders/{po_id}/` - Retrieving Details of a specific purchase order**<br/><br/>
+- **po_id** is purchase_order id
+- Returns a response when passing id=36<br/><br/>
+&nbsp; &nbsp; &nbsp; &nbsp; ![image](https://github.com/SalmanSaalu/Vendor-Management-System/assets/87108862/8679b1db-031d-481e-8aa2-181b254a0912)<br/>
+
+**4. PUT `/api/purchase_orders/{po_id}/` - Updating Details of a purchase order**<br/><br/>
+- **po_id** is purchase_order id
+- passing parameters such as **status,vendor and quality_rating**,these 3 fields are required
+- **status** should be in ['canceled,'pending','completed'] , if ** status** is pending or canceled the **quality_rating** passed along with it is not stored ,since quality_rating
+  is only stored when status is completed.**vendor** can be updated in each status case
+- Response when updated eg: when **vendor**=18, **status**=completed ,**quality_rating**=4.<br/><br/>
+&nbsp; &nbsp; &nbsp; &nbsp; ![image](https://github.com/SalmanSaalu/Vendor-Management-System/assets/87108862/ce11a6a2-8fff-483c-9992-27efc20ada3f)<br/>
+
+- when the **status** is completed the **vendor** and **quality_average** is updated.
+- if **status** is completed ,a signal is triggered  to update -required performance metric fields in **Vendor** model  and new performance history
+  record is added in **History Performance** Model (note: only when status is completed) .performance of the vendor is also updated when a vendor acknowledges or status changes to cenceled.
+- Also the fields such as **acknowledgement_date** and **delivery_date** in **Purchase_order** model is automatically added.
+-**delivery_date** is the date and time when we pass the **status**=completed (ie : product is delivered completely and cannot update the details further)
+-**acknowledgement_date** is the date of current_time+ 3 days ( normally this field is filled when a vendor passes a acknowledgement,but if the admin chooses the product delivery is completed
+then the acknowledgement_date has to be filled )
+
+**5. POST `/api/purchase_orders/{po_id}/acknowledge` - Acknowledgment by vendor**<br/><br/>
+- **po_id** is purchase_order id
+- **average_response_time** is triggered when calling acknowedgement and a vendor can perform a acknowledgement of a purchase order once .
+- After acknowledgement vendor field in purchase order cannot be updated
+- Returns a successfully acknowledged message
+
+**6. DELETE /`api/purchase_orders/{po_id}/` - Deleting a purchase order**<br/><br/>
 
    
