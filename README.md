@@ -80,6 +80,14 @@ to access the functionality.
 **5. DELETE `/api/vendors/{vendor_id}/` - Deleting a specific vendor**<br/><br/>
 - passing **id** of vendor for deletion
 - Returns a response of successful deletion `{"response": "deletion successsful"}`
+
+**6. GET `/api/vendors/{vendor_id}/performance` - Listing performance of a vendor**
+- passing vendor_id
+- Return a response containing **quality_rating_average,on_time_delivery_rate,average_response_time,fulfillment_rate**
+- **quality_rating_average** shows a value out of **5**
+- **on_time_delivery_rate** shows a percent out of **100**
+- **average_response_time** shows in a format **00.00** when initial values before decimal shows hours and values after decimal show minutes.
+- **fulfillment_rate** shows a percentage out of **100**
      
 ### II.Purchase Order Tracking
 In Purchase Order Tracking **all the api endpoints are secured using token authentication**, where admin with the token can only access the endpoints.
@@ -132,5 +140,6 @@ then the acknowledgement_date has to be filled )
 - Returns a successfully acknowledged message
 
 **6. DELETE /`api/purchase_orders/{po_id}/` - Deleting a purchase order**<br/><br/>
-
+- **po_id** is purchase_order id
+- deletes the given purchase order
    
